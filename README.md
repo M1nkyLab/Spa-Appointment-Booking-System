@@ -1,65 +1,62 @@
 # 💆‍♀️ Spa Appointment Booking System (Java Console App)
 
-A simple console-based **appointment booking system** for a spa. This program allows users (staff) to add, display, and update customer appointments with details like date, time, and spa attendant name.
+A simple console-based Java application to manage spa appointment bookings. This system is designed to help spa staff efficiently add, display, and update customer appointments, ensuring smooth scheduling and service management.
 
 ---
 
-## 🧑‍💻 Programmer Info
+## 📌 Key Features
 
-- **Name:** Haziq  
-- **Created On:** 14 June 2024
-
----
-
-## 📌 Features
-
-- ✅ Book up to 20 spa appointments
-- ✅ Collect customer name, date, time, and spa attendant
-- ✅ Display individual and all appointment details
-- ✅ Update an existing appointment by number
-- ✅ Validate user input to prevent crashes
+- ✅ Book up to **20 spa appointments**
+- ✅ Collect details: **Customer Name, Appointment Date, Time, Spa Attendant**
+- ✅ Display **individual or all** appointment records
+- ✅ **Update** existing appointments by appointment number
+- ✅ **Input validation** to avoid crashes and maintain data accuracy
 
 ---
 
 ## 🧾 Technologies Used
 
-- Java SE (Standard Edition)
-- Console-based input/output with `Scanner`
+- ☕ **Java SE (Standard Edition)**  
+- 🖥️ Console-based I/O using `Scanner` class  
 
 ---
 
-## 🧱 Class Breakdown
+## 🧱 Program Structure
 
-### 1. `Appointment_system.java`
+### 🔹 1. `Appointment_system.java`
+A custom class representing a single appointment, with:
 
-A custom class that contains:
+- **Fields:**
+  - `custName` (String)
+  - `apptDate` (String)
+  - `apptTime` (String)
+  - `spaAttendantName` (String)
+- **Constructor** with parameters
+- **Getter and Setter methods** (encapsulation)
+- **`toString()` method** for formatted output
 
-- Fields: `custName`, `apptDate`, `apptTime`, `spaAttendantName`
-- Constructor with parameters
-- Getter & Setter methods (Encapsulation)
-- `toString()` method for formatted output
+---
 
-### 2. `DemoBookingSystem.java`
+### 🔹 2. `DemoBookingSystem.java`
+Main driver class responsible for:
 
-The main class that:
-
-- Uses an array of `Appointment_system` objects (max size: 20)
-- Provides a loop to:
-  - Input appointment details
-  - Ask if the user wants to add more
-  - Display all appointments
-  - Optionally update an existing appointment
-  - View updated list
+- Creating an **array of `Appointment_system` objects** (max: 20)
+- Repeatedly:
+  - Accepting input for new appointments
+  - Asking whether to add more entries
+  - Displaying all existing appointments
+  - Providing option to update a selected appointment
+  - Showing the updated list afterward
 
 ---
 
 ## 🧪 Sample Workflow
 
-```bash
+```plaintext
 Customer Name: Sarah
-The Appointment Date (YY/MM/DD): 24/07/15
-The Appointment Time (HH:MM)(AM/PM): 03:00PM
-Spa Attendent Name: Lisa
+Appointment Date (YY/MM/DD): 24/07/15
+Appointment Time (HH:MM)(AM/PM): 03:00PM
+Spa Attendant Name: Lisa
 
 Do you want to add another appointment? (Y/N): y
 ...
@@ -70,8 +67,6 @@ Customer Name: Sarah
 Appointment Date: 24/07/15
 Appointment Time: 03:00PM
 Spa Attendant Name: Lisa
-...
 
-Enter the Appointments number to be updated(1-2): 1
+Enter the appointment number to update (1-2): 1
 Enter the new Customer Name: Sara Lee
-...
